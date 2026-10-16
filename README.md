@@ -90,6 +90,8 @@ These screenshots are from one of our runs, where we kept hovering over flowers 
 
 **Generation 14:** the population is much more uniform: about 7 petals, light purple petals and mostly green centers, with a bit of variation left from mutation.
 
+<img width="967" height="648" alt="Screenshot 2026-10-14 014341" src="https://github.com/user-attachments/assets/8d0bfbc4-6853-42c6-b345-6837e917bcef" />
+
 
 
 ## Team
