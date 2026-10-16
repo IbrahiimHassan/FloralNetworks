@@ -2,10 +2,12 @@ import random
 
 from flower import Flower
 
+POPULATION_SIZE = 12
+
 def generate_population():
     population = []
 
-    for i in range(8):
+    for i in range(POPULATION_SIZE):
         dna = [random.randint(20,30),
                random.randint(0,255),
                random.randint(0,255),
@@ -60,13 +62,11 @@ def mutate(flower):
 
 def create_new_population(population):
     new_population = []
-    for i in range(4):
+    while len(new_population) < POPULATION_SIZE:
         f1 = selection(population)
         f2 = selection(population)
-        child1, child2 = crossover(f1,f2)
-        result1 = mutate(child1)
-        result2 = mutate(child2)
-        new_population.append(result1)
-        new_population.append(result2)
+        child1, child2 = crossover(f1, f2)
+        new_population.append(mutate(child1))
+        new_population.append(mutate(child2))
 
-    return new_population
+    return new_population[:POPULATION_SIZE]
